@@ -1,1 +1,3 @@
-console.log('Hello console!');
+const { initPageBindings } = require('./lib/handlers');
+
+initPageBindings();
