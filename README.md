@@ -37,3 +37,47 @@ returns
 	"message": "Hello World!"
 }
 ```
+
+---
+
+**`/anime` Endpoint**
+
+Get all anime.
+
+`GET /anime`
+
+returns
+
+```json
+{
+	"anime": [
+    {
+      "id": int uid,
+      "title": string,
+      "genre": string,
+      "rating": int
+    },
+    ...
+  ]
+}
+```
+
+---
+
+Get an anime by id.
+
+`GET /anime/:id`
+
+returns
+
+```json
+{
+	"anime":
+    {
+      "id": int uid,
+      "title": string,
+      "genre": string,
+      "rating": int
+    }
+}
+```
