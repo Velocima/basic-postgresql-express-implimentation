@@ -6,8 +6,8 @@ A basic implimentation of a Postgresql database and Nodejs/Express server.
 
 ### Installation
 
-- To start the server and database run `docker compose up`
-- To stop the server and database run `docker compose down --remove-orphans --volumes`
+- Spin up the containers and start the server and database by running `docker compose up`
+- Spin down the containers and stop the server and database by running `docker compose down --remove-orphans --volumes`
 
 ### Usage
 
