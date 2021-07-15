@@ -1,5 +1,7 @@
 # Basic Postgres/Express Implimentation
 
+A basic implimentation of a Postgresql database and Nodejs/Express server.
+
 ## Installation & Usage
 
 ### Installation
@@ -14,4 +16,24 @@
 
 ## API
 
-### `/`
+Accepts and returns JSON.
+
+### Root
+
+The base url of the api is `http://localhost:5000/`
+
+### Endpoints
+
+**`/` Endpoint**
+
+Get `Hello World!` message. For testing (✿◡‿◡)
+
+`GET /`
+
+returns
+
+```json
+{
+	"message": "Hello World!"
+}
+```
