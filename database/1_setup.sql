@@ -6,3 +6,10 @@ CREATE TABLE anime (
   genre varchar(255) NOT NULL,
   rating int NOT NULL
 );
+
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+  username varchar(255) PRIMARY KEY,
+  password varchar(255) NOT NULL
+);

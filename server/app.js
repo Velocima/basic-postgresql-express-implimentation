@@ -15,4 +15,7 @@ app.get('/', (req, res) => {
 const animeRouter = require('./controllers/anime');
 app.use('/anime', animeRouter);
 
+const usersRouter = require('./controllers/users');
+app.use('/users', usersRouter);
+
 module.exports = app;

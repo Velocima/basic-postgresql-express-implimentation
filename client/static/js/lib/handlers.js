@@ -1,4 +1,4 @@
-const { showLoginPassword } = require('./helpers');
+const { showLoginPassword, loadUserProfile } = require('./helpers');
 const { handleLoginFormSubmit } = require('./auth');
 
 function bindHandleLoginFormSubmit() {
@@ -11,11 +11,17 @@ function bindShowLoginPassword() {
 	button.addEventListener('click', showLoginPassword);
 }
 
+function bindloadUserProfile() {
+	document.addEventListener('DOMContentLoaded', loadUserProfile);
+}
+
 function initPageBindings() {
 	const path = window.location.pathname.split('.')[0].slice(1);
 	if (path === 'login') {
-		bindShowLoginPassword();
 		bindHandleLoginFormSubmit();
+		bindShowLoginPassword();
+	} else if (path === 'profile') {
+		bindloadUserProfile();
 	}
 }
 
