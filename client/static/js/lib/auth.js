@@ -15,7 +15,6 @@ async function handleLoginFormSubmit(e) {
 		};
 		const jsonResponse = await fetch('http://localhost:5000/users/login', options);
 		const response = await jsonResponse.json();
-		console.log(response);
 		if (response.success) {
 			const token = response.token.slice(7);
 			const decoded = jwt_decode(token);

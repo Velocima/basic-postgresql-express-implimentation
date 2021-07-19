@@ -25,7 +25,6 @@ async function handleLoginFormSubmit(e) {
 		};
 		const jsonResponse = await fetch('http://localhost:5000/users/login', options);
 		const response = await jsonResponse.json();
-		console.log(response);
 		if (response.success) {
 			const token = response.token.slice(7);
 			const decoded = jwt_decode(token);
@@ -82,10 +81,7 @@ function showLoginPassword(e) {
 
 function loadUserProfile() {
 	const token = localStorage.getItem('token');
-	console.log(Date.now() / 1000);
-	console.log(jwt_decode(token).exp < Date.now() / 1000);
 	if (jwt_decode(token).exp < Date.now() / 1000) {
-		console.log('redirecting...');
 		window.location.href = 'http://localhost:3000/login.html';
 		localStorage.removeItem('username');
 		localStorage.removeItem('token');

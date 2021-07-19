@@ -9,10 +9,7 @@ function showLoginPassword(e) {
 
 function loadUserProfile() {
 	const token = localStorage.getItem('token');
-	console.log(Date.now() / 1000);
-	console.log(jwt_decode(token).exp < Date.now() / 1000);
 	if (jwt_decode(token).exp < Date.now() / 1000) {
-		console.log('redirecting...');
 		window.location.href = 'http://localhost:3000/login.html';
 		localStorage.removeItem('username');
 		localStorage.removeItem('token');
